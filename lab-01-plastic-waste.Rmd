@@ -41,22 +41,28 @@ plastic_waste %>%
 
 ### Exercise 3
 
-*Remove this text, and add your answer for Exercise 3 here.*
+Colour and fill are aesthetic and edit how to data looks whereas the alpha variable changed the size of the line therefore it doesn't fit under the aesthetic branch of code but rather under characteristic.
 
 ### Exercise 4
 
-*Remove this text, and add your answer for Exercise 4 here.*
+Shows the distribution of waste in different countries within the continent whereas, box plots only show the continet's waste as a whole
 
 ```{r plastic-waste-violin}
-# remove this comment and add the code for Exercise 4 here
+# ggplot(data = plastic_waste, 
+       mapping = aes(x = continent, 
+                     y = plastic_waste_per_cap)) +
+  geom_violin()
 ```
 
 ### Exercise 5
 
-*Remove this text, and add your answer for Exercise 5 here.*
+
 
 ```{r plastic-waste-mismanaged}
-# remove this comment and add the code for Exercise 5 here
+ ggplot(data = plastic_waste, 
++        mapping = aes(x = mismanaged_plastic_waste_per_cap, 
++                      y = plastic_waste_per_cap)) +
++     geom_point()
 ```
 
 ### Exercise 6
@@ -64,7 +70,10 @@ plastic_waste %>%
 *Remove this text, and add your answer for Exercise 6 here.*
 
 ```{r plastic-waste-mismanaged-continent}
-# remove this comment and add the code for Exercise 6 here
+ ggplot(data = plastic_waste, 
++        mapping = aes(x = mismanaged_plastic_waste_per_cap, 
++                      y = plastic_waste_per_cap, color = continent)) +
++     geom_point()
 ```
 
 ### Exercise 7
