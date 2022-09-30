@@ -19,16 +19,24 @@ plastic_waste <- read_csv("data/plastic-waste.csv")
 
 ### Exercise 1
 
-*Remove this text, and add your answer for Exercise 1 here.*
+*Trinidad and Tobago has a much higher plastic waste per capita than other countries being nearly 3x as high as the next highest.*
 
 ```{r plastic-waste-continent}
-# remove this comment and add the code for Exercise 1 here
+# ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2)
+plastic_waste %>%
+  filter(plastic_waste_per_cap > 3.5)
+
 ```
 
 ### Exercise 2
 
 ```{r plastic-waste-density}
-# remove this comment and add the code for Exercise 2 here
+# ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density(alpha = 0.2)
 ```
 
 ### Exercise 3
